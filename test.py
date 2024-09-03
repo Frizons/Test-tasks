@@ -36,7 +36,7 @@ class GetItemInfo:
         convert_page = url.text
         get_page = BeautifulSoup(convert_page, "html.parser")
         find_tag_product_name = get_page.find("h1", class_="x-item-title__mainTitle")
-        tag_product_name = find_tag_product_name.contents[4]
+        tag_product_name = find_tag_product_name.contents[3]
         product_name = tag_product_name.contents[0]
 
         find_tag_product_image = get_page.find_all(
